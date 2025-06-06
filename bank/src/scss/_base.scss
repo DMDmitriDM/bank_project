@@ -1,0 +1,101 @@
+/* ============================================ */
+/* ================ global ==================== */
+/* ============================================ */
+
+html {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+.body-reset {
+  min-width: 320px;
+  font-family: 'Roboto', arial, sans-serif;
+  background-color: var(--page);
+}
+
+/* ============================================ */
+/* ================ general =================== */
+/* ============================================ */
+
+.container {
+  margin: 0 auto;
+  max-width: 1440px;
+  width: 100%;
+}
+
+.img-max {
+  max-width: 100%;
+}
+
+.link-reset {
+  color: inherit;
+  text-decoration: none;
+}
+
+.list-reset {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.btn-reset {
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.stop-scroll {
+  overflow: hidden;
+}
+
+/* ============================================ */
+/* ================ buttons =================== */
+/* ============================================ */
+
+.blue-btn {
+  border: 2px solid var(--primary);
+  border-radius: 7px;
+  padding: 12px 19px;
+  font-family: var(--font-ubuntu);
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 143%;
+  letter-spacing: -0.01em;
+  color: var(--white);
+  background-color: var(--primary);
+  outline: none;
+  transition: border-color 0.3s ease-in-out, background-color 0.3s ease-in-out;
+}
+
+// .blue-btn:focus-visible {
+//   border-color: var(--grey-2);
+// }
+
+.blue-btn:focus {
+  border-color: var(--grey-2);
+  outline: none;
+}
+
+@media (hover: hover) {
+  .blue-btn:hover {
+    border-color: var(--primary-2);
+    background-color: var(--primary-2);
+  }
+}
+
+.blue-btn:active {
+  border-color: var(--primary-3);
+  background-color: var(--primary-3);
+}
+
+.blue-btn:disabled {
+  border-color: var(--grey-5);
+  background-color: var(--grey-5);
+}

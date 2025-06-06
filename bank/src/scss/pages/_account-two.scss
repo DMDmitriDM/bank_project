@@ -1,0 +1,33 @@
+.dynamics-section--set,
+.transactions-section--set {
+  margin-bottom: 50px;
+}
+
+.dynamics-section .dynamics--set,
+.transactions-section .dynamics--set {
+  padding-right: 50px;
+  max-width: none;
+}
+
+.dynamics-section .dynamics__draw,
+.transactions-section .dynamics__draw {
+  max-width: 1000px;
+}
+
+.dynamics-section .dynamics__scale,
+.transactions-section .dynamics__scale {
+  max-width: 200px;
+}
+
+.transactions-section .dynamics__scale-midle {
+  display: flex;
+  flex-direction: column;
+  justify-items: flex-start;
+  align-items: flex-start;
+}
+
+.dynamics-section .dynamics__scale-span,
+.transactions-section .dynamics__scale-span {
+  font-size: 20px;
+}
+

@@ -1,0 +1,108 @@
+// -------------- //
+
+.dropdown {
+  position: relative;
+  width: 100%;
+  user-select: none;
+}
+
+// -------------- //
+
+.dropdown__toggle {
+  position: relative;
+  border: 1px solid var(--primary);
+  border-radius: 7px;
+  padding: 9px 16px;
+  width: 100%;
+  font-family: var(--font-ubuntu);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: -0.01em;
+  color: var(--grey-2);
+  text-align: left;
+  background-color: var(--white);
+  outline: none;
+  transition: background-color ease-in-out 0.3s;
+}
+
+.dropdown__toggle::before {
+  content: "";
+  position: absolute;
+  right: 16px;
+  top: 11.5px;
+  width: 24px;
+  height: 21px;
+  background-image: url("~/src/assets/images/dropdown.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 24px 21px;
+  transition: transform ease-in-out 0.3s;
+}
+
+.dropdown--open .dropdown__toggle:before {
+  transform: rotate(-180deg);
+}
+
+.dropdown__toggle:hover,
+.dropdown__toggle:active,
+.dropdown__toggle:focus {
+  background-color: var(--primary-6);
+}
+
+.dropdown__toggle:focus {
+  outline: none;
+}
+
+// -------------- //
+
+.dropdown__menu {
+  position: absolute;
+  z-index: 3;
+  border: 1px solid var(--white);
+  border-radius: 7px;
+  padding: 9px 0;
+  width: 100%;
+  max-height: 152px;
+  overflow-y: auto;
+  background-color: var(--white);
+  box-shadow: 0 5px 20px 0 rgba(0, 0, 0, 0.25);
+  visibility: hidden;
+  opacity: 0;
+  transform-origin: 0 0;
+  transform: scaleY(0);
+  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.dropdown__menu.dropdown__menu--open {
+  opacity: 1;
+  visibility: visible;
+  transform: scaleY(1);
+}
+
+.dropdown__item {
+  position:relative;
+  display: block;
+  padding: 10px 16px;
+  width: 100%;
+  font-family: var(--font-ubuntu);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: -0.01em;
+  color: var(--grey-2);
+  text-align: left;
+  background-color: var(--white);
+  outline: none;
+  transition: background-color ease-in-out 0.3s;
+}
+
+.dropdown__item:hover,
+.dropdown__item:active,
+.dropdown__item:focus {
+  background-color: var(--primary-6);
+}
+
+.dropdown__item:focus {
+  outline: none;
+}

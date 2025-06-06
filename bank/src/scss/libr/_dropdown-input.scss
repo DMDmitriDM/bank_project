@@ -1,0 +1,83 @@
+// .input-auto-box {
+//   position: relative;
+//   max-width: 210px;
+//   width: 100%;
+// }
+
+.input-auto-box::before {
+  content: "";
+  position: absolute;
+  right: 16px;
+  top: 11.5px;
+  width: 24px;
+  height: 21px;
+  background-image: url("~/src/assets/images/dropdown.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 24px 21px;
+  transition: transform ease-in-out 0.3s;
+}
+
+.input-auto-box--open.input-auto-box::before {
+  transform: rotate(-180deg);
+}
+
+/* ----- */
+
+.input-auto-menu {
+  position: absolute;
+  z-index: 3;
+  right: 0;
+  top: 44px;
+  border: 1px solid var(--white);
+  border-radius: 7px;
+  padding: 9px 0;
+  width: 300px;
+  max-height: 152px;
+  background-color: var(--white);
+  box-shadow: 0 5px 20px 0 rgba(0, 0, 0, 0.25);
+  overflow-y: auto;
+  transform-origin: 0 0;
+  opacity: 0;
+  visibility: hidden;
+  transform: scaleY(0);
+  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.input-auto-menu--open {
+  visibility: visible;
+  opacity: 1;
+  transform: scaleY(1);
+}
+
+.input-auto-menu-stuffer {
+  width: 100%;
+}
+
+/* ----- */
+
+.input-auto-menu-btn {
+  display: none;
+  padding: 10px 16px;
+  width: 100%;
+  font-family: var(--font-ubuntu);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: -0.01em;
+  color: var(--grey-2);
+  text-align: left;
+  background-color: var(--white);
+  outline: none;
+  transition: background-color ease-in-out 0.3s;
+}
+
+.input-auto-menu-btn--open {
+  display: block;
+}
+
+.input-auto-menu-btn:focus-visible,
+.input-auto-menu-btn:hover,
+.input-auto-menu-btn:active {
+  background-color: var(--primary-6);
+}

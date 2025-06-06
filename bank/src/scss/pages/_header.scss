@@ -1,0 +1,91 @@
+.header--set {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 50px;
+  height: 100px;
+  background-color: var(--primary);
+  box-shadow: 0 5px 20px 0 rgba(0, 0, 0, 0.25);
+}
+
+.nav--set {
+  padding: 24px 0;
+}
+
+.header__logo {
+  position: relative;
+  font-family: var(--font-work-sans);
+  font-weight: 300;
+  font-size: 48px;
+  color: var(--white);
+  outline: none;
+}
+
+.header__logo::after {
+  position: absolute;
+  content: '';
+  top: -3px;
+  right: -5px;
+  bottom: -3px;
+  left: -5px;
+  border: 2px solid var(--black);
+  border-radius: 7px;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.header__logo:focus-visible::after {
+  opacity: 1;
+}
+
+.nav--set {
+  display: flex;
+  justify-content: space-between;
+  max-width: 505px;
+  width: 100%;
+}
+
+.nav__btn {
+  border: 2px solid var(--primary);
+  border-radius: 7px;
+  padding: 14px 24px;
+  font-family: var(--font-ubuntu);
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 125%;
+  letter-spacing: -0.01em;
+  text-align: center;
+  color: var(--primary);
+  background-color: var(--white);
+  outline: none;
+  transition: border-color 0.3s ease-in-out, background-color 0.3s ease-in-out;
+}
+
+// .nav__btn:focus-visible {
+//   border-color: var(--black);
+// }
+
+.nav__btn:focus {
+  border-color: var(--black);
+  outline: none;
+}
+
+@media (hover: hover) {
+  .nav__btn:hover {
+    border-color: var(--primary);
+    background-color: var(--primary-4);
+  }
+}
+
+.nav__btn:active {
+  border-color: var(--primary);
+  background-color: var(--primary-5);
+}
+
+.nav__btn:disabled {
+  border-color: var(--primary);
+  background-color: var(--primary-4);
+  cursor: default;
+}

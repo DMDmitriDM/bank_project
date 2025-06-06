@@ -1,0 +1,120 @@
+.main--set {
+  padding: 0 50px;
+  min-height: calc(100vh - 100px);
+  background-color: var(--white);
+}
+
+.caption-accounts--set {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 147px;
+}
+
+.caption-accounts__left {
+  display: flex;
+  align-items: center;
+}
+
+.caption-accounts__title {
+  margin: 0;
+  margin-right: 35px;
+  font-family: var(--font-ubuntu);
+  font-weight: 700;
+  font-size: 34px;
+  letter-spacing: -0.02em;
+  color: var(--black);
+}
+
+.caption-accounts__sort {
+  width: 300px;
+}
+
+.caption-accounts__btn {
+  padding: 12px 22.5px;
+  font-size: 16px;
+}
+
+.caption-accounts__btn-span {
+  display: block;
+  padding-top: 0.5px;
+  padding-left: 34px;
+  height: 24px;
+  background-image: url("~/src/assets/images/plus.svg");
+  background-position: left center;
+  background-size: 24px 24px;
+  background-repeat: no-repeat;
+}
+
+// ---------------------------------------- //
+
+.box-accounts--set {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+.account-card--set {
+  border-radius: 9px;
+  padding: 22px;
+  width: calc((100% - 2 * 70px) / 3);
+  box-shadow: 0 5px 20px 0 rgba(0, 0, 0, 0.25);
+  background-color: var(--white);
+  margin-right: 70px;
+  margin-bottom: 50px;
+}
+
+.account-card--set:nth-child(3n) {
+  margin-right: 0;
+}
+
+.account-card--set:nth-last-child(-n + 3) {
+  margin-bottom: 0;
+}
+
+// ---------------------------------------- //
+
+.account-card-title {
+  margin: 0;
+  margin-bottom: 9px;
+  font-family: var(--font-roboto);
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 122%;
+  letter-spacing: -0.01em;
+  color: var(--secondary-1);
+}
+
+.account-card-balance {
+  display: block;
+  margin-bottom: 9px;
+  font-family: var(--font-ubuntu);
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 143%;
+  color: var(--secondary-1);
+}
+
+.account-card-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.account-card-transaction-title {
+  margin: 0;
+  font-family: var(--font-ubuntu);
+  font-weight: 700;
+  font-size: 13px;
+  letter-spacing: -0.02em;
+  color: var(--black);
+}
+
+.account-card-transaction-date {
+  font-family: var(--font-ubuntu);
+  font-weight: 400;
+  font-size: 13px;
+  letter-spacing: -0.02em;
+  color: var(--black);
+}

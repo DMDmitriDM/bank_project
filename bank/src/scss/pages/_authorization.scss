@@ -1,0 +1,162 @@
+.page-login--set {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: var(--white);
+}
+
+.form-login--set {
+  border-radius: 50px;
+  padding: 50px 0;
+  max-width: 500px;
+  width: 100%;
+  background: var(--grey-7);
+}
+
+.form-login__title {
+  padding-left: 115px;
+  margin: 0;
+  margin-bottom: 35px;
+  font-family: var(--font-ubuntu);
+  font-weight: 700;
+  font-size: 34px;
+  letter-spacing: -0.02em;
+  color: var(--black);
+}
+
+.form-login__box-inputs {
+  margin-bottom: 5px;
+}
+
+.form-login__box-input {
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding-right: 85px;
+  padding-bottom: 25px;
+}
+
+.form-login__input-title {
+  padding-right: 18px;
+  font-family: var(--font-ubuntu);
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 125%;
+  letter-spacing: -0.01em;
+  text-align: right;
+  color: var(--secondary-1);
+}
+
+.form-login__input {
+  border: 1px solid var(--grey-5);
+  border-radius: 7px;
+  padding: 8px 10px 8px 16px;
+  max-width: 300px;
+  width: 100%;
+  min-height: 44px;
+  font-family: var(--font-ubuntu);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: -0.01em;
+  color: var(--grey-2);
+  background-color: var(--white);
+  outline: none;
+  transition: border-color 0.3s ease-in-out, color 0.3s ease-in-out, background-color 0.3s ease-in-out;
+}
+
+.form-login__input:focus-visible {
+  border-color: var(--primary);
+  color: var(--grey-2);
+  background-color: var(--secondary-2);
+}
+
+@media (hover: hover) {
+  .form-login__input:not(:focus-visible):hover {
+    border-color: var(--primary);
+    color: var(--grey-5);
+    background-color: var(--secondary-2);
+  }
+
+  .form-login__input:not(:focus-visible):hover.form-login__input--error {
+    border-color: var(--error);
+  }
+
+  .form-login__input:not(:focus-visible):hover.form-login__input--success {
+    border-color: var(--success);
+  }
+}
+
+.form-login__input:active {
+  border-color: var(--primary);
+  color: var(--grey-2);
+  background-color: var(--secondary-2);
+}
+
+.form-login__input:disabled {
+  border-color: var(--grey-5);
+  color: var(--grey-5);
+  background-color: var(--white);
+}
+
+.form-login__input.form-login__input--error {
+  border-color: var(--error);
+  background-color: var(--white);
+}
+
+.form-login__input.form-login__input--success {
+  border-color: var(--success);
+  background-color: var(--white);
+}
+
+.form-login__span-error {
+  position: absolute;
+  left: 117px;
+  bottom: 3px;
+  padding-left: 28px;
+  font-family: var(--font-ubuntu);
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 125%;
+  letter-spacing: -0.01em;
+  color: var(--error);
+  background-image: url("~/src/assets/images/error.svg");
+  background-position: left center;
+  background-size: 20px 20px;
+  background-repeat: no-repeat;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.form-login__span-error--active {
+  opacity: 1;
+}
+
+.form-login__span-success {
+  position: absolute;
+  left: 117px;
+  bottom: 3px;
+  padding-left: 28px;
+  font-family: var(--font-ubuntu);
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 125%;
+  letter-spacing: -0.01em;
+  color: var(--success);
+  background-image: url("~/src/assets/images/success.svg");
+  background-position: left center;
+  background-size: 20px 20px;
+  background-repeat: no-repeat;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.form-login__span-success--active {
+  opacity: 1;
+}
+
+.form-login__box-btn {
+  padding-left: 115px;
+}

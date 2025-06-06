@@ -1,0 +1,27 @@
+.main-atms--set {
+  padding: 50px;
+  min-height: calc(100vh - 100px);
+  background-color: var(--white);
+}
+
+.caption-atms--set {
+  height: 96px;
+}
+
+.caption-atms__title {
+  margin: 0;
+  font-family: var(--font-ubuntu);
+  font-weight: 700;
+  font-size: 34px;
+  letter-spacing: -0.02em;
+  color: var(--black);
+}
+
+.box-atms--set {
+  // background-color: bisque;
+  height: calc(100vh - 100px - 146px - 50px);
+}
+
+.box-atms__map {
+  height: 100%;
+}
